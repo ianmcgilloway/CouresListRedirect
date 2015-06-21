@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://www.blackboard.com/bb-manifest-plugin"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.blackboard.com/bb-manifest-plugin https://maven.blackboard.com/content/repositories/releases/blackboard/platform/bb-manifest-plugin/9.1.110082.0/bb-manifest-plugin-9.1.110082.0.xsd">
+  <plugin>
+
+    <name value="b2.name" />
+    <handle value="entry-point" />
+    <description value="b2.description" />
+    <default-locale value="en" />
+
+    <version value="1.15" />
+    <requires>
+      <bbversion value="9.1.201404.160205" />
+    </requires>
+
+    <vendor>
+      <id value="TCS" />
+      <name value="Teacupsupper" />
+      <url value="http://www.teacupsupper.com" />
+      <description value="Teacupsupper" />
+    </vendor>
+
+    <application-defs>
+      <application handle="TCS-entry-point" type="shared" use-ssl="false"
+                   name="tool.name" can-allow-guest="false">
+        <description lang="en"></description>
+        <links>
+          <link>
+            <type value="course_list_context_menu"/>
+            <name value="tool.name"/>
+            <url value="dispatch.do?course_id=@X@course.pk_string@X@" />
+            <description value="tool.description" />
+          </link>
+        </links>
+      </application>
+    </application-defs>
+
+    <!-- Code permissions required for proper operation -->
+    <permissions>
+    </permissions>
+
+  </plugin>
+</manifest>

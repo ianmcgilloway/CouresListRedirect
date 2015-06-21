@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5"
+         xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+    <display-name>Course List Redirect</display-name>
+    <welcome-file-list>
+        <welcome-file>dispatch.do</welcome-file>
+    </welcome-file-list>
+
+    <description>
+        Redirect to course specific page from course list.
+    </description>
+    <servlet>
+        <servlet-name>CourseListRedirectController</servlet-name>
+        <servlet-class>com.teacupsupper.bb.courselist.CourseListRedirectController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CourseListRedirectController</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+</web-app>
