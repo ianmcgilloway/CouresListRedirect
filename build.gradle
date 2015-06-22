@@ -7,7 +7,7 @@ apply plugin: "idea"
 //apply from: "api.gradle"
 
 // define the version for the project when publishing to maven
-group "uk.ac.imperial"
+group "com.teacupsupper"
 version "1.0-SNAPSHOT"
 
 ext {
