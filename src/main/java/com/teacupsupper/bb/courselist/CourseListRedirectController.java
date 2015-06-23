@@ -21,8 +21,8 @@ public class CourseListRedirectController extends HttpServlet {
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
 
-           response.setStatus(response.SC_MOVED_PERMANENTLY);
-           response.setHeader("Location", getRedirectLocation(request));
+        response.setStatus(response.SC_MOVED_PERMANENTLY);
+        response.setHeader("Location", getRedirectLocation(request));
     }
 
     private String getRedirectLocation(HttpServletRequest request) {
@@ -46,7 +46,6 @@ public class CourseListRedirectController extends HttpServlet {
         location.append(props.getProperty("path"));
         location.append(request.getParameter(props.getProperty("course_param")));
 
-        System.out.println(location);
         return location.toString();
     }
 }
